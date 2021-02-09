@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//Solución recomendada. O(n)
 public class Solution {
 
   static boolean isAnagram(String a, String b) { 
