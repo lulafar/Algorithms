@@ -1,0 +1,24 @@
+
+
+public class Solution {
+
+    public static void main(String[] args) {
+    
+        //Inicialización forma A
+       String ciudades[] = {"Avila","Burgos","León","Palencia","Salamanca",
+               "Segovia","Soria","Valladolid","Zamora"};
+       //Saber el tamaño      
+       int tamaño=ciudades.length;
+               
+        //Inicialización forma B-> tamaño 9    
+        String ciudades2[] = new String[9];
+        //Añadir valores a los índices
+         ciudades2[1]="Burgos";
+         ciudades2[6]="Segovia";
+        //Extraer valores del Array        
+        String ciudadAcueducto=ciudades[5];
+              
+    }
+}
+
+
