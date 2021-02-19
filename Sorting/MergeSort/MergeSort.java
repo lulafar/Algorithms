@@ -7,14 +7,14 @@ public class MergeSort {
     public static void mergesort(int[] array, int[] helper, int low, int high) {
         if (low < high) {
             int middle = (low + high) / 2;
-            mergesort(array, helper, low, middle); // Sort left half
-            mergesort(array, helper, middle+1, high); // Sort right half
-            merge(array, helper, low, middle, high); // Merge them
+            mergesort(array, helper, low, middle); // Ordenar la mita de la izquierda
+            mergesort(array, helper, middle+1, high); //  Ordenar la mita de la derecha
+            merge(array, helper, low, middle, high); // Unirlos
         }
     }
 
     public static void merge(int[] array, int[] helper, int low, int middle, int high) {
-		/* Copy both halves into a helper array */
+		/* Copiar las dos mitades en un Array helper */
         for (int i = low; i <= high; i++) {
             helper[i] = array[i];
         }
@@ -23,9 +23,8 @@ public class MergeSort {
         int helperRight = middle + 1;
         int current = low;
 
-		/* Iterate through helper array. Compare the left and right
-		 * half, copying back the smaller element from the two halves
-		 * into the original array. */
+	/* Iterar sobre el array helper. Comparar el primer elemento de la derecha 
+	con el de la izquierda, copiar el elemento más pequeño en el array original*/
         while(helperLeft<=middle && helperRight <= high) {
             if(helper[helperLeft]<=helper[helperRight])
             {
