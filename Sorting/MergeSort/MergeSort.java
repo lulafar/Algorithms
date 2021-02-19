@@ -38,9 +38,8 @@ public class MergeSort {
             }
             current++;
         }
-		/* Copy the rest of the left side of the array into the
-		 * target array */
-        /* We only copy the left side of the array as the right side don't need to do this*/
+	/* Copiar el resto del lado izquierdo del Arrat dentro del target array */
+        /* Solo copiamos el lado izquierdo ya que el derecho no lo necesita, ya "está ahí"*/
         int remaining = middle - helperLeft;
         for(int i = 0 ;i<remaining;i++)
             array[current+i] = helper[helperLeft+i];
